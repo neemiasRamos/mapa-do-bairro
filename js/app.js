@@ -91,10 +91,7 @@ function initMap() {
                 }, 2000);
             }
         }   
-        
-       // marker.addListener('mouseover', function() {
-            //this.setIcon(highlightedIcon);
-        });
+      
         marker.addListener('mouseout', function() {
             this.setIcon(defaultIcon);
         });
@@ -106,8 +103,7 @@ function initMap() {
 
     map.fitBounds(bounds);
 
-    //document.getElementById('show-listings').addEventListener('click', showListings);
-    //document.getElementById('hide-listings').addEventListener('click', hideListings);
+   
 }
 
 function inseriInfoWindow(marker, infowindow) {

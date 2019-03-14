@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Projeto - Mapa do bairro</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  	<script src="js/app.js"></script>
+  	<script src="js/lib/knockout-3.4.2.js"></script>
+    <script src='js/lib/jquery-3.2.1.js'></script>
+  <body>
+    <div class="container">
+      <div class="barra-lateral">
+        <h1>Pontos turisticos</h1>
+        
+        <div>
+          <input type="text" placeholder="Filtro" data-bind="textInput: query">      
+         <ul data-bind="foreach:filteredPlaces">
+            <a href="#"><li class="list-item"  data-bind="text:titulo, click:$root.clickMarker"></li></a>
+         </ul>
+         <div class="apiWikipedia">
+            <h3 class="nomeCidade">Maringa - PR</h3>
+            <div data-bind="html: $root.description"></div>
+         </div>
+        </div>
+      </div>
+      <div id="map"></div>
+    </div>
+    <script src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyBFjyWqAPMY_djB1Qi96tnMhVy0PwVp0uI&callback=3&callback=initMap" onerror="googleError()"></script>
+  </body>
+</html>

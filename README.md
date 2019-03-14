@@ -10,6 +10,6 @@ A aplicação exibe um mapa com os pontos turisticos da cidade de Maringá - PR
 ## Resultado
 ![Resultado](https://github.com/neemiasRamos/mapa-do-bairro/blob/master/chrome_JFbKZwMS5c.png)
 
-## Apis utilizadas
+## API's utilizadas
 1. API do Google MAPS
 2. API do Wikipedia

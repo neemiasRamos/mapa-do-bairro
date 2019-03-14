@@ -92,8 +92,8 @@ function initMap() {
             }
         }   
         
-        marker.addListener('mouseover', function() {
-            this.setIcon(highlightedIcon);
+       // marker.addListener('mouseover', function() {
+            //this.setIcon(highlightedIcon);
         });
         marker.addListener('mouseout', function() {
             this.setIcon(defaultIcon);
@@ -106,8 +106,8 @@ function initMap() {
 
     map.fitBounds(bounds);
 
-    document.getElementById('show-listings').addEventListener('click', showListings);
-    document.getElementById('hide-listings').addEventListener('click', hideListings);
+    //document.getElementById('show-listings').addEventListener('click', showListings);
+    //document.getElementById('hide-listings').addEventListener('click', hideListings);
 }
 
 function inseriInfoWindow(marker, infowindow) {
@@ -233,7 +233,7 @@ var ViewModel = function() {
     self.filteredPlaces = ko.computed(function() {
     
     return ko.utils.arrayFilter(self.placesList(), function(location) { 
-        console.log(location)
+        //console.log(location)
         if (location.titulo.toLowerCase().indexOf(self.query().toLowerCase()) >= 0) {
             location.marker.setVisible(true);
             return true;
